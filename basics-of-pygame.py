@@ -6,7 +6,9 @@ HEIGHT = 500 # also in pixels
 FRAMERATE = 60 # so how many frames per second does the game runs
 
 # initialize pygame
-pygame.init()
+pygame.mixer.pre_init(44100, -16, 2, 1024)
+    pygame.init()
+    pygame.mixer.set_num_channels(64)
 # create a display surface aka a screen
 screen = pygame.display.set_mode((WIDTH, HEIGHT))
 # create a clock object to control the amount of time the game updates
@@ -54,4 +56,4 @@ while True:
     pygame.display.update()
 
     # set the framerate of the game window
-    clock.tick(FRAMERATE)
+    clock.tick()

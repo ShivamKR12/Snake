@@ -1,0 +1,17 @@
+{
+  "name": "pwa",
+  "short_name": "pwa",
+  "start_url": "./",
+  "display": "fullscreen",
+  "background_color": "#FFFFFF",
+  "theme_color": "#FFFFFF",
+  "orientation": "landscape",
+  "icons": [
+    {
+      "src": "./favicon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

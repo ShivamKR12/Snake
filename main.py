@@ -239,7 +239,9 @@ class MAIN:
 # preinitialize the pygame mixer so that the crunch sound play at the right timer
 # pygame.mixer.pre_init(4410, -16, 2, 512) # BUG : preinitialization is messing with the sounds !!!
 # initialize pygame
-pygame.init()
+pygame.mixer.pre_init(44100, -16, 2, 1024)
+    pygame.init()
+    pygame.mixer.set_num_channels(64)
 # set the title of the pygame window to be the name of the game
 pygame.display.set_caption("Snake")
 # create a display surface aka a screen
@@ -312,4 +314,4 @@ while True:
     pygame.display.update()
 
     # set the framerate of the game window
-    clock.tick(FRAMERATE)
+    clock.tick()
